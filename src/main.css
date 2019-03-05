@@ -1,5 +1,33 @@
 ul {
     display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    border: 1px solid black;
+}
+
+form {
+    margin-left: 20px;
+}
+
+#search-form button {
+    margin-left: 18px;
+}
+
+#page-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    margin-left: 20px;
+}
+
+#page-buttons button {
+    align-self: center;
+    
 }
 
 li {
@@ -9,6 +37,8 @@ li {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 5px;
+    border-radius: 1px;
 }
 
 img {
