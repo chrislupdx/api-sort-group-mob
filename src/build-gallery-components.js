@@ -9,3 +9,12 @@ export default function renderHtmlMovieTemplate(movieObject){
     template.innerHTML = html;
     return template.content;
 }
+
+
+export function loadMovieList(movieArray) {
+    const movieListNode = document.getElementById('movie-list');
+    movieArray.forEach(movie => {
+        const dom = renderHtmlMovieTemplate(movie);
+        movieListNode.appendChild(dom);
+    });
+}
