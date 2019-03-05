@@ -1,0 +1,17 @@
+ul {
+    display: flex;
+}
+
+li {
+    border: 2px solid black;
+    list-style-type: none;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    align-self: center;
+}
