@@ -48,4 +48,5 @@ img {
 
 .hidden {
     display: none;
+    visibility: hidden;
 }

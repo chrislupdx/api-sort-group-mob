@@ -11,7 +11,7 @@ export function updatePagingInfo(pagingInfo){
     currentPageNumber = pagingInfo.page;
     currentPageNode.textContent = currentPageNumber;
     totalPageNode.textContent = pagingInfo.totalPages;
-    nextButtonNode.disabled = currentPageNode === pagingInfo.totalPageNode;
+    nextButtonNode.disabled = currentPageNumber === pagingInfo.totalPages;
     previousButtonNode.disabled = currentPageNumber === 1;
 }
 
