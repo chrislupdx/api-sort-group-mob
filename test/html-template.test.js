@@ -31,7 +31,7 @@ test('make function to return temlate literal', function(assert) {
     const result = renderHtmlMovieTemplate(movieObject)
     const expected = /*html*/`<li>
         <h2>Star Wars</h2>
-        <img src="/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg">
+        <img src="http://image.tmdb.org/t/p/w92/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg">
         <h3>1977-05-25</h3>
         </li>`;
 
