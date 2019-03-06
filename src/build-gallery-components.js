@@ -12,7 +12,6 @@ export default function renderHtmlMovieTemplate(movieObject){
 
 
 export function loadMovieList(movieArray) {
-    console.log(movieArray);
     const movieListNode = document.getElementById('movie-list');
     movieArray.forEach(movie => {
         const dom = renderHtmlMovieTemplate(movie);

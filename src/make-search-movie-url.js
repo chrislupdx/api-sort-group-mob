@@ -8,6 +8,6 @@ export default function makeSearchMovieUrl(queryOptions){
     url.searchParams.set('include_adult', false);
     url.searchParams.set('query', queryOptions.searchTerm);
     url.searchParams.set('page', queryOptions.page);
-
+//all of these are api specific/provided
     return url.toString();
 }

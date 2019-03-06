@@ -11,5 +11,6 @@ window.addEventListener('hashchange', () => {
     const query = window.location.hash.slice(1);
     const queryOptions = readFromQuery(query);
     const apiURL = makeSearchMovieUrl(queryOptions);
+    updateSearchTerm(queryOptions.searchTerm);
     fetch(apiURL).then(response => response.json()).then(resultjson => loadMovieList(resultjson.results));
 });
