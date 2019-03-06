@@ -10,11 +10,19 @@ export default function renderHtmlMovieTemplate(movieObject){
     return template.content;
 }
 
+const movieListNode = document.getElementById('movie-list');
 
 export function loadMovieList(movieArray) {
-    const movieListNode = document.getElementById('movie-list');
+    clearMovies();
+    
     movieArray.forEach(movie => {
         const dom = renderHtmlMovieTemplate(movie);
         movieListNode.appendChild(dom);
     });
+}
+
+function clearMovies(){
+    while(movieListNode.children.length > 0){
+        movieListNode.lastElementChild.remove();
+    }
 }

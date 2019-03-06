@@ -45,3 +45,7 @@ img {
     width: 100px;
     align-self: center;
 }
+
+.hidden {
+    display: none;
+}
