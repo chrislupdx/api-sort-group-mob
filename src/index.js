@@ -1,8 +1,8 @@
 import { loadMovieList } from './build-gallery-components.js';
 import { updateSearchTerm } from './search-component.js';
-import movies from '../data/movies.js';
 import { readFromQuery } from './hash-query.js';
 import makeSearchMovieUrl from './make-search-movie-url.js';
+import { updatePagingInfo } from './paging-component.js';
 
 
 
@@ -12,5 +12,10 @@ window.addEventListener('hashchange', () => {
     const queryOptions = readFromQuery(query);
     const apiURL = makeSearchMovieUrl(queryOptions);
     updateSearchTerm(queryOptions.searchTerm);
-    fetch(apiURL).then(response => response.json()).then(resultjson => loadMovieList(resultjson.results));
+    fetch(apiURL)
+        .then(response => response.json())
+        .then(resultjson => loadMovieList(resultjson.results));
+        const pagingInfo = {
+            
+        }
 });
