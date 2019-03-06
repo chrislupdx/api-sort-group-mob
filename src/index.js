@@ -14,8 +14,12 @@ window.addEventListener('hashchange', () => {
     updateSearchTerm(queryOptions.searchTerm);
     fetch(apiURL)
         .then(response => response.json())
-        .then(resultjson => loadMovieList(resultjson.results));
-        const pagingInfo = {
-            
-        }
+        .then(resultjson => {
+            loadMovieList(resultjson.results);
+            const pagingInfo = {
+                page: resultjson.page,
+                totalPages: resultjson.total_pages
+            };
+            updatePagingInfo(pagingInfo);
+        });
 });
